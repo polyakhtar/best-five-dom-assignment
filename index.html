@@ -5,101 +5,161 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select best five</title>
+    <title>Choose Your Best Five</title>
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="styles/style.css">
+
 </head>
 
 <body>
-    <!--top section start-->
-    <section>
-        <div class="top-banner">
-            <h1>Select Your Best Five</h1>
-            <p>Football is a family of team sports that involve, to varying degrees,
-            </p>
-            <p>kicking a ball to score a goal. Unqualified, the word football normally </p>
-            <p>means the form of football.</p>
+    <!--heading step start-->
+    <header>
+        <section class="header mt-5">
+            <div class="container">
+                <div style="background-color:#000000; height: 450px; " class=" d-flex ">
+                    <div class="col-6 top-header ">
+                        <div class="ms-5  mt-5">
+                            <h1 style="color:#FF5E19 ;" class="header-title">Choose Best Five Football Players</h1>
+                            <p class="text-white mt-3">Who is the greatest player in this season? It is Time to
+                                select
+                                your favourate best player for the up coming Fifa World Cup 2022. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        </div>
-    </section>
-    <!--card and calculation section-->
-    <main class="pb-5">
+    </header>
+    <!--heading step end-->
 
-        <div class="col-md-12">
-            <div class="m-5">
-                <div class="card-group">
+    <!--main step start -->
+    <main>
+        <section class="players mt-5" id="player-card">
+            <div class="container">
+                <div class="row">
                     <!-- card-1 -->
-                    <div class="card m-3 text-center bg-black text-white">
-                        <img src="images/messi.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fs-4 fw-semibold">Lionel Messi</h5>
-                            <p class="card-text"> 30 goals 120 Assist</p>
-                            <button id="btn-select1" type="button" class="btn btn-primary w-100">SELECT</button>
+                    <div class="col-lg-3 ">
+                        <div class="card">
+                            <img class="player-img" src="images/messi.jpg" alt="">
+                            <div class="card-info text-center bg-black text-white">
+                                <h3 class="mt-4  fw-bold fs-4">Lionel Messi</h3>
+                                <p class="text-decorate"><span>36 Goals</span> <span class="ms-3 text-">120
+                                        Assist</span>
+                                </p>
+                                <button class="bg-primary text-white p-1 w-75 fs-5 mb-2"
+                                    onclick='select(this)'>SELECT</button>
+                            </div>
                         </div>
                     </div>
                     <!-- card-2 -->
-                    <div class="card m-3 text-center bg-black text-white">
-                        <img src="images/neymer.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fs-4 fw-semibold">Neymer Jr.</h5>
-                            <p class="card-text">30 goals 120 Assist</p>
-                            <button id="btn-select2" type="button" class="btn btn-primary w-100">SELECT</button>
+                    <div class="col-lg-3 ">
+                        <div class="card">
+                            <img class="player-img" src="images/neymer.jpg" alt="">
+                            <div class="card-info text-center bg-black text-white">
+                                <h3 class="mt-4 fw-bold fs-4">Neymer Jr</h3>
+                                <p class="text-decorate"><span>36 Goals</span> <span class="ms-3 text-">120
+                                        Assist</span>
+                                </p>
+                                <button class="bg-primary text-white p-1 w-75 fs-5 mb-2"
+                                    onclick='select(this)'>SELECT</button>
+                            </div>
                         </div>
                     </div>
                     <!-- card-3 -->
-                    <div class="card m-3 text-center bg-black text-white">
-                        <img src="images/mbappe.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fs-4 fw-semibold">Kylian Mbappe</h5>
-                            <p class="card-text">30 goals 120 Assist</p>
-                            <button id="btn-select3" type="button" class="btn btn-primary w-100">SELECT</button>
+                    <div class="col-lg-3 ">
+                        <div class="card">
+                            <img class="player-img" src="images/mbappe.jpg" alt="">
+                            <div class="card-info text-center bg-black text-white">
+                                <h3 class="mt-4  fw-bold fs-4">Kylian Mbappé</h3>
+                                <p class="text-decorate"><span>36 Goals</span> <span class="ms-3 text-">120
+                                        Assist</span>
+                                </p>
+                                <button class="bg-primary text-white p-1 w-75 fs-5 mb-2"
+                                    onclick='select(this)'>SELECT</button>
+                            </div>
                         </div>
                     </div>
-                    <!-- selected player -->
-                    <div class="card m-3 text-center text-white bg-black  p-4">
-                        <h1 class="fs-5 text-white">Selected-V</h1>
-                        <ol type="1">
-                            <li class="mb-3"></li>
-                            <li class="mb-3"></li>
-                            <li class="mb-3"></li>
-                            <li class="mb-3"></li>
-                            <li></li>
-                        </ol>
+
+                    <!--selection step-->
+                    <div class="col-lg-3 ">
+                        <div class="text-white card bg-black text-center " style="height: 300px;">
+
+                            <h2 class="fs-3 text-white py-1">Selected - <span id="selected-player-number">V</span></h2>
+                            <div id="crad-list" class="">
+                                <table id="" class="table text-white">
+                                    <thead>
+                                        <tr>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody id="selected-player-list">
+
+                                        <tr>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
+
+
                 </div>
-                <div class="card-group">
+            </div>
+        </section>
+
+        <section id="player-card" class="mt-5">
+            <div class="container">
+                <div class="row ">
                     <!-- card-4 -->
-                    <div class="card m-3 text-center bg-black text-white">
-                        <img src="images/machado.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fs-4 fw-semibold">Vitor Machado</h5>
-                            <p class="card-text"> 30 goals 120 Assist</p>
-                            <button id="btn-select4" type="button" class="btn btn-primary w-100">SELECT</button>
+                    <div class="col-lg-3 ">
+                        <div class="card">
+                            <img class="player-img" src="images/machado.jpg" alt="">
+                            <div class="card-info text-center bg-black text-white">
+                                <h3 class="mt-4 fw-bold  fs-4">Vítor Machado
+                                </h3>
+                                <p class="text-decorate"><span>36 Goals</span> <span class="ms-3 text-">120
+                                        Assist</span>
+                                </p>
+                                <button class="bg-primary text-white p-1 w-75 fs-5 mb-2"
+                                    onclick='select(this)'>SELECT</button>
+                            </div>
                         </div>
                     </div>
                     <!-- card-5 -->
-                    <div class="card m-3 text-center bg-black text-white">
-                        <img src="images/ramos.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fs-4 fw-semibold">Sergio Ramos</h5>
-                            <p class="card-text">30 goals 120 Assist</p>
-                            <button id="btn-select5" type="button" class="btn btn-primary w-100">SELECT</button>
+                    <div class="col-lg-3 ">
+                        <div class="card">
+                            <img class="player-img" src="images/ramos.jpg" alt="">
+                            <div class="card-info text-center bg-black text-white">
+                                <h3 class="mt-4  fw-bold fs-4">Sergio Ramos</h3>
+                                <p class="text-decorate"><span>36 Goals</span> <span class="ms-3 text-">120
+                                        Assist</span>
+                                </p>
+                                <button class="bg-primary text-white p-1 w-75 fs-5 mb-2"
+                                    onclick='select(this)'>SELECT</button>
+                            </div>
                         </div>
                     </div>
                     <!-- card-6 -->
-                    <div class="card m-3 text-center bg-black text-white">
-                        <img src="images/renato.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fs-4 fw-semibold">Renato Sanches</h5>
-                            <p class="card-text">30 goals 120 Assist</p>
-                            <button id="btn-select6" type="button" class="btn btn-primary w-100">SELECT</button>
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <img class="player-img" src="images/renato.jpg" alt="">
+                            <div class="card-info text-center bg-black text-white">
+                                <h3 class="mt-4 fw-bold fs-4"> Renato Sanches
+                                </h3>
+                                <p class="text-decorate"><span>36 Goals</span> <span class="ms-3 text-">120
+                                        Assist</span>
+                                </p>
+                                <button class="bg-primary text-white p-1 w-75 fs-5 mb-2"
+                                    onclick='select(this)'>SELECT</button>
+                            </div>
                         </div>
                     </div>
-                    <!-- calculation of total expenses for player and total expenses for full match programm  -->
-                    <div class="card m-3 text-center text-white bg-black p-4 height-40px">
-
+                    <!--calculation step-->
+                    <div class="col-lg-3 bg-black text-center text-white p-3 mb-5">
                         <div class="d-inline">
-                            <h1 class="fs-4 text-white ">Budget</h1>
+                            <h1 class="fs-4 text-white mb-4">Budget</h1>
                             <p>
                                 Per Player <input id="per-player-cost-field" class="bg-black w-50 ms-3 text-white"
                                     type="text">
@@ -120,30 +180,31 @@
                         <p class="mt-3">Total
                             <span class="ms-5">$ <span id="total-cost">00</span></span>
                         </p>
+
                     </div>
+
+
+
                 </div>
             </div>
-        </div>
-        </div>
+        </section>
 
-
-        </div>
-        </div>
 
     </main>
+    <!--main step end-->
+
+
     <!--footer start-->
-    <hr class="text-white pb-5">
-
-    <footer>
-
-        <p class="text-white text-center  pb-5">Copyright @ 2022 All Rights Reserved</p>
-
+    <footer class="mt-5 text-center bg-black p-5">
+        <p class="text-white">Copyright @ 2022 All Rights Reserved.</p>
     </footer>
-
-
+    <!--footer end-->
+    <!--js source link-->
     <script src="bootstrap/bootstrap.min.js"></script>
-    <script src="js/select.js"></script>
-    <script src="js/calculate.js"></script>
+    <!--js file connection link-->
+    <script src="js/select-calculation.js"></script>
+
+
 </body>
 
 </html>

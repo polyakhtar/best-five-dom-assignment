@@ -1,25 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@400;500&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@400;500&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: rgb(19, 18, 18);
-}
+ body {
+     font-family: 'Open Sans', sans-serif;
+ }
 
-.top-banner {
-    background-color: black;
-    text-align: center;
-    color: white;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-    text-align: center;
-    padding-top: 150px;
-    margin: 0%;
+ .top-header {
+     margin: auto;
+     text-align: center;
 
-}
+ }
 
-h1 {
-    color: #f97316;
-    font-size: 50px;
-    margin-bottom: 35px;
-}
+ .text-decorate {
+     color: gray;
+
+ }
